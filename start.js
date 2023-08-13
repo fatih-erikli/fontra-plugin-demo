@@ -1,4 +1,10 @@
 class FontraPlugin {
+  enter() {
+    console.log("Hello fontra");
+  }
+  exit() {
+    console.log("Goodbye fontra");
+  }
   main(fontra) {
     fontra.addSidebarPanel({
       name: "my-panel",
@@ -9,10 +15,10 @@ class FontraPlugin {
         return div;
       },
       attach() {
-        console.log("Hello fontra");
+        
       },
       detach() {
-        console.log("Goodbye fontra");
+        
       }
     },
       "right"
