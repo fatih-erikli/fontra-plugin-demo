@@ -3,7 +3,7 @@ class FontraPlugin {
     fontra.addSidebarPanel(
       new (class {
         name = "my-panel";
-        icon = "https://www.svgrepo.com/show/506176/cut.svg";
+        icon = "/images/gear.svg";
 
         getContentElement() {
           const div = document.createElement("div");
