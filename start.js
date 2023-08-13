@@ -16,9 +16,6 @@ class FontraPlugin {
       },
       attach() {
         
-      },
-      detach() {
-        
       }
     },
       "right"
