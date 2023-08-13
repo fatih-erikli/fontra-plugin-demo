@@ -1,4 +1,4 @@
-class Plugin {
+class FontraPlugin {
   main(fontra) {
     fontra.addSidebarPanel(
       class {
