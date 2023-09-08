@@ -1,4 +1,5 @@
 {
   "name": "fontra-plugin-demo",
-  "init": "./start.js"
+  "init": "./start.js",
+  "function": "start"
 }
