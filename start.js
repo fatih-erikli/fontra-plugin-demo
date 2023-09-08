@@ -5,7 +5,7 @@ export function start(editorController) {
     toggle() {},
     attach() {},
     getContentElement() {
-      const div = document.createElement();
+      const div = document.createElement("div");
       div.innerHTML = "demo panel";
       return div;
     }
