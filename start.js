@@ -1,13 +1,11 @@
-export function start(editorController) {
+export function start(editorController, html) {
   editorController.addSidebarPanel({
     iconPath: "/images/gear.svg",
     identifier: "demo-panel",
     toggle() {},
     attach() {},
     getContentElement() {
-      const div = document.createElement("div");
-      div.innerHTML = "demo panel";
-      return div;
+      return html.div({}, ['demo panel']);
     }
   }, 'right');
 }
