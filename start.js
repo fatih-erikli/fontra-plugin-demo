@@ -1,3 +1,13 @@
 export function start(editorController) {
-  console.log('access to editorController instance from plugin', editorController);
+  editorController.addSidebarPanel({
+    iconPath: "/images/gear.svg",
+    identifier: "demo-panel",
+    toggle() {},
+    attach() {},
+    getContentElement() {
+      const div = document.createElement();
+      div.innerHTML = "demo panel";
+      return div;
+    }
+  }, 'right');
 }
