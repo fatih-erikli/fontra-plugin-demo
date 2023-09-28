@@ -1,4 +1,4 @@
-import { objectsEqual } from "utils";
+import { objectsEqual } from "fontra/core/utils.js";
 
 const div = document.createElement("div");
 div.innerHTML = "my div";
