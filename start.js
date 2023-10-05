@@ -1,7 +1,10 @@
 import { objectsEqual } from "fontra/core/utils.js";
 
 const div = document.createElement("div");
-div.innerHTML = "my div";
+const button = document.createElement("button");
+button.innerHTML = "my button";
+button.addEventListener("click", () => {alert(1)});
+div.appendChild(button);
 
 export function start(editorController, html) {
   editorController.addSidebarPanel({
