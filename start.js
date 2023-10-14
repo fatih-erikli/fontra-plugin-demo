@@ -6,13 +6,7 @@ button.innerHTML = "my button";
 button.addEventListener("click", () => {alert(1)});
 div.appendChild(button);
 
-export function start(editorController, html) {
-  editorController.addSidebarPanel({
-    iconPath: "/images/gear.svg",
-    identifier: "demo-panel",
-    toggle() {},
-    attach() {},
-    contentElement: div
-  }, 'right');
+export function start(editorController, pluginPath) {
+  editorController.addSidebarPanel({icon: `${pluginPath}/dog.svg`, name: "demo-panel"}, "right", div);
   console.log('function from fontra utils', objectsEqual);
 }
