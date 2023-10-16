@@ -1,12 +1,20 @@
-import { objectsEqual } from "fontra/core/utils.js";
+import Panel from "fontra/editor/panel.js";
 
-const div = document.createElement("div");
-const button = document.createElement("button");
-button.innerHTML = "my button";
-button.addEventListener("click", () => {alert(1)});
-div.appendChild(button);
-
-export function start(editorController, pluginPath) {
-  editorController.addSidebarPanel({icon: `${pluginPath}/dog.svg`, name: "demo-panel"}, "right", div);
-  console.log('function from fontra utils', objectsEqual);
+export function hello(editorController, pluginPath) {
+  class MyPanel extends Panel {
+    identifier = "panel-demo";
+    iconPath = `${pluginPath}/dog.svg`;
+    getContentElement() {
+      const div = document.createElement("div");
+      const button = document.createElement("button");
+      button.innerHTML = "my button2";
+      button.addEventListener("click", () => {
+        alert(1);
+      });
+      div.appendChild(button);
+      return div;
+    }
+  }
+  customElements.define("panel-demo", MyPanel);
+  editorController.addSidebarPanel(new MyPanel(editorController), "right");
 }
