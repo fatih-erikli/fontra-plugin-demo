@@ -1,6 +1,6 @@
 import Panel from "fontra/editor/panel.js";
 
-export function hello(editorController, pluginPath) {
+export function start(editorController, pluginPath) {
   class MyPanel extends Panel {
     identifier = "panel-demo";
     iconPath = `${pluginPath}/dog.svg`;
